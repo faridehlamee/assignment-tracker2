@@ -40,7 +40,7 @@ export function Assignment({ assignment,setAssignments }: AssignmentProps) {
         {isCompleted ? <BsCheckCircleFill /> : <div />}
       </button>
 
-      <p>{assignment.title}</p>
+      <p className= { isCompleted ? styles.textCompleted : ""}>{assignment.title}</p>
 
       <button className={styles.deleteButton}  onClick={handleDeleteAssignment} >
         <TbTrash size={20} />
